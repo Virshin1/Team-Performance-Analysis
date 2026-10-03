@@ -58,7 +58,8 @@
   4. **Stratified Splitting**: Preserved the 40/60 class balance across train and test sets, avoiding sample distribution shift.
 
 ### 6. Can the model be deployed for prediction?
-* **Answer**: **Yes, deployed into an interactive Streamlit application (`app.py`).**
+* **Answer**: **Yes, deployed live on Streamlit Community Cloud and running locally via `app.py`.**
+* **Live Cloud Application**: [https://virshin1-team-performance-analysis-app-kwvw1u.streamlit.app/](https://virshin1-team-performance-analysis-app-kwvw1u.streamlit.app/)
 * **Deployment Architecture**:
   - The trained models, preprocessor, and feature names are serialized as lightweight `.pkl` files (`best_model.pkl`, `best_regressor.pkl`, `scaler.pkl`, `feature_names.pkl`).
   - The Streamlit dashboard allows Olympic planners, sports analysts, and athletic directors to configure delegation variables (roster size, events, sports, athlete demographics, host status) and immediately receive:

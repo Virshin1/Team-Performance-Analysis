@@ -33,7 +33,7 @@ Instead of deploying multiple redundant algorithms, this project selects and foc
 | **Recall** | **85.64%** | Captures 85.6% of all true medal-winning nations (avoids missing potential podium contenders). |
 | **F1-Score** | **0.8782** | Harmonic balance between precision and recall, optimizing athletic resource allocation. |
 | **Test ROC-AUC** | **0.9584** | Outstanding discriminative ability across all classification decision thresholds. |
-| **10-Fold CV Mean** | **88.18%** | Validates model generalizability across 10 distinct subsets of historical Olympic cycles. |
+| **Normal Test R2** | **0.8838** | Explains 88.4% of variance on unseen Olympic games (MAE: 1.80 medals, RMSE: 5.01). |
 
 ---
 
@@ -50,15 +50,16 @@ Instead of deploying multiple redundant algorithms, this project selects and foc
 
 ---
 
-## How to Run
+## Live Deployment & Execution
 
-### 1. Run the Master Jupyter Notebook:
+### Live Cloud Application
+- **Direct App Link**: [https://virshin1-team-performance-analysis-app-kwvw1u.streamlit.app/](https://virshin1-team-performance-analysis-app-kwvw1u.streamlit.app/)
+
+### Local Execution:
 ```bash
+# 1. Run Master Jupyter Notebook
 jupyter notebook olympic_team_performance.ipynb
-```
 
-### 2. Launch the Streamlit Web Application:
-```bash
+# 2. Run Local Streamlit Dashboard
 streamlit run app.py
 ```
-Open browser at: `http://localhost:8502`

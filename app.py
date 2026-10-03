@@ -157,7 +157,7 @@ is_host_sel = st.sidebar.selectbox("Host Country Status", options=["Visiting Del
 is_host = 1 if "Host Nation" in is_host_sel else 0
 
 # Header
-st.markdown('<div class="header-tag">Machine Learning &middot; Sports Analytics Case Study</div>', unsafe_allow_html=True)
+st.markdown('<div class="header-tag">Machine Learning &middot; Sports Analytics Case Study &middot; <a href="https://virshin1-team-performance-analysis-app-kwvw1u.streamlit.app/" target="_blank" style="color: #2563eb; font-weight: 600; text-decoration: underline;">Live Cloud App</a></div>', unsafe_allow_html=True)
 st.markdown('<div class="title-text">Olympic Team Performance Analysis Dashboard</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle-text">Empirical analysis and machine learning evaluation of the measurable operational, demographic, and historical factors associated with Olympic podium success.</div>', unsafe_allow_html=True)
 
@@ -241,24 +241,17 @@ with tab_assess:
         </div>
         """, unsafe_allow_html=True)
 
-    # Probability Distribution Bar
-    st.markdown("#### Probability Distribution")
-    prob_df = pd.DataFrame({
-        "Outcome": ["No Medals", "Medal Winner (Podium)"],
-        "Probability": [no_podium_prob, podium_prob]
-    })
-    prob_chart = alt.Chart(prob_df).mark_bar(size=26).encode(
-        x=alt.X("Probability:Q", title="Probability (%)", scale=alt.Scale(domain=[0, 100])),
-        y=alt.Y("Outcome:N", title=None, sort=["No Medals", "Medal Winner (Podium)"]),
-        color=alt.Color("Outcome:N", scale=alt.Scale(
-            domain=["No Medals", "Medal Winner (Podium)"],
-            range=["#94a3b8", "#1d4ed8" if pred_clf == 1 else "#b91c1c"]
-        ), legend=None),
-        tooltip=["Outcome", alt.Tooltip("Probability:Q", format=".1f")]
-    ).properties(height=110)
-    st.altair_chart(prob_chart, use_container_width=True)
+    # Probability Distribution (Native Streamlit, Zero White-Bar Artifacts)
+    st.markdown("#### Outcome Probability Breakdown")
+    c_p1, c_p2 = st.columns(2)
+    with c_p1:
+        st.markdown(f"**Medal Winner (Podium)**: `{podium_prob:.1f}%`")
+        st.progress(min(1.0, max(0.0, float(podium_prob / 100.0))))
+    with c_p2:
+        st.markdown(f"**No Medals**: `{no_podium_prob:.1f}%`")
+        st.progress(min(1.0, max(0.0, float(no_podium_prob / 100.0))))
 
-    # Diagnostic Factor Benchmark Table
+    # Diagnostic Factor Benchmark Table (Native dataframe, theme-adaptive)
     st.markdown("---")
     st.markdown("#### Operational Factor Comparison with Historical Benchmarks")
     st.markdown("Comparing configured parameters against the median profile of Olympic medal-winning delegations (1960-2016):")
@@ -305,7 +298,7 @@ with tab_assess:
             "2.8% (Low)"
         ]
     })
-    st.table(bench_data)
+    st.dataframe(bench_data, use_container_width=True, hide_index=True)
 
 with tab_factors:
     st.markdown("### Measurable Factors Associated with Stronger Results")
@@ -322,7 +315,7 @@ with tab_factors:
             y=alt.Y("Feature:N", title=None, sort="-x"),
             tooltip=["Feature", alt.Tooltip("Importance:Q", format=".2%")]
         ).properties(height=360)
-        st.altair_chart(chart, use_container_width=True)
+        st.altair_chart(chart, use_container_width=True, theme="streamlit")
 
     with c_right:
         st.markdown("#### Key Factor Hierarchy")
