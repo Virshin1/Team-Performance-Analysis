@@ -1,0 +1,273 @@
+{
+  "classification_summary": [
+    {
+      "Model": "Random Forest",
+      "Accuracy": 90.51,
+      "Precision": 90.12,
+      "Recall": 85.64,
+      "F1-Score": 0.8782,
+      "Test ROC-AUC": 0.9584,
+      "10-Fold CV Mean (%)": 88.18,
+      "CV Std": 0.0257
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Accuracy": 90.29,
+      "Precision": 90.06,
+      "Recall": 85.08,
+      "F1-Score": 0.875,
+      "Test ROC-AUC": 0.9596,
+      "10-Fold CV Mean (%)": 87.96,
+      "CV Std": 0.0248
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 89.4,
+      "Precision": 86.74,
+      "Recall": 86.74,
+      "F1-Score": 0.8674,
+      "Test ROC-AUC": 0.9278,
+      "10-Fold CV Mean (%)": 87.36,
+      "CV Std": 0.0234
+    },
+    {
+      "Model": "SVM (RBF Kernel)",
+      "Accuracy": 89.4,
+      "Precision": 92.36,
+      "Recall": 80.11,
+      "F1-Score": 0.858,
+      "Test ROC-AUC": 0.9527,
+      "10-Fold CV Mean (%)": 88.18,
+      "CV Std": 0.0259
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 88.96,
+      "Precision": 91.19,
+      "Recall": 80.11,
+      "F1-Score": 0.8529,
+      "Test ROC-AUC": 0.9595,
+      "10-Fold CV Mean (%)": 88.07,
+      "CV Std": 0.0234
+    },
+    {
+      "Model": "KNN (k=5)",
+      "Accuracy": 88.08,
+      "Precision": 89.94,
+      "Recall": 79.01,
+      "F1-Score": 0.8412,
+      "Test ROC-AUC": 0.9146,
+      "10-Fold CV Mean (%)": 86.09,
+      "CV Std": 0.0263
+    }
+  ],
+  "regression_summary": [
+    {
+      "Model": "Gradient Boosting Regressor",
+      "Train R2": 0.9863,
+      "Test R2": 0.8838,
+      "RMSE": 5.0091,
+      "MAE": 1.8038
+    },
+    {
+      "Model": "Random Forest Regressor",
+      "Train R2": 0.97,
+      "Test R2": 0.8685,
+      "RMSE": 5.3275,
+      "MAE": 1.8007
+    },
+    {
+      "Model": "KNN Regressor",
+      "Train R2": 0.925,
+      "Test R2": 0.85,
+      "RMSE": 5.6908,
+      "MAE": 1.8958
+    },
+    {
+      "Model": "Multiple Linear Regression",
+      "Train R2": 0.8743,
+      "Test R2": 0.838,
+      "RMSE": 5.914,
+      "MAE": 2.0681
+    },
+    {
+      "Model": "Decision Tree Regressor",
+      "Train R2": 0.9602,
+      "Test R2": 0.8342,
+      "RMSE": 5.9834,
+      "MAE": 2.0761
+    }
+  ],
+  "feature_importance": [
+    {
+      "Feature": "total_athletes",
+      "Importance": 0.2552673903151368
+    },
+    {
+      "Feature": "num_events",
+      "Importance": 0.25001556427445876
+    },
+    {
+      "Feature": "total_entries",
+      "Importance": 0.16466263982563573
+    },
+    {
+      "Feature": "num_sports",
+      "Importance": 0.11923488296498463
+    },
+    {
+      "Feature": "prev_medals",
+      "Importance": 0.11271915683279776
+    },
+    {
+      "Feature": "mean_age",
+      "Importance": 0.02830065670863274
+    },
+    {
+      "Feature": "female_ratio",
+      "Importance": 0.018882167942194536
+    },
+    {
+      "Feature": "mean_height",
+      "Importance": 0.017754170244480914
+    },
+    {
+      "Feature": "mean_bmi",
+      "Importance": 0.017432336838085503
+    },
+    {
+      "Feature": "mean_weight",
+      "Importance": 0.01573103405359262
+    },
+    {
+      "Feature": "is_host",
+      "Importance": 0.0
+    }
+  ],
+  "ols_summary": [
+    {
+      "Feature": "const",
+      "Coefficient": 4.8343,
+      "Std_Error": 0.1249,
+      "t_stat": 38.7,
+      "p_value": 0.0,
+      "CI_Lower": 4.5893,
+      "CI_Upper": 5.0794
+    },
+    {
+      "Feature": "total_athletes",
+      "Coefficient": 0.28,
+      "Std_Error": 1.221,
+      "t_stat": 0.23,
+      "p_value": 0.81868,
+      "CI_Lower": -2.1148,
+      "CI_Upper": 2.6748
+    },
+    {
+      "Feature": "total_entries",
+      "Coefficient": 8.9193,
+      "Std_Error": 1.3004,
+      "t_stat": 6.86,
+      "p_value": 0.0,
+      "CI_Lower": 6.3689,
+      "CI_Upper": 11.4697
+    },
+    {
+      "Feature": "num_sports",
+      "Coefficient": -1.8157,
+      "Std_Error": 0.4054,
+      "t_stat": -4.48,
+      "p_value": 1e-05,
+      "CI_Lower": -2.6109,
+      "CI_Upper": -1.0205
+    },
+    {
+      "Feature": "num_events",
+      "Coefficient": -3.437,
+      "Std_Error": 0.8758,
+      "t_stat": -3.92,
+      "p_value": 9e-05,
+      "CI_Lower": -5.1547,
+      "CI_Upper": -1.7193
+    },
+    {
+      "Feature": "female_ratio",
+      "Coefficient": 0.1473,
+      "Std_Error": 0.1408,
+      "t_stat": 1.05,
+      "p_value": 0.29578,
+      "CI_Lower": -0.1289,
+      "CI_Upper": 0.4235
+    },
+    {
+      "Feature": "mean_age",
+      "Coefficient": -0.0683,
+      "Std_Error": 0.1307,
+      "t_stat": -0.52,
+      "p_value": 0.60144,
+      "CI_Lower": -0.3246,
+      "CI_Upper": 0.188
+    },
+    {
+      "Feature": "mean_height",
+      "Coefficient": -1.6873,
+      "Std_Error": 1.0092,
+      "t_stat": -1.67,
+      "p_value": 0.09472,
+      "CI_Lower": -3.6667,
+      "CI_Upper": 0.2921
+    },
+    {
+      "Feature": "mean_weight",
+      "Coefficient": 3.1281,
+      "Std_Error": 1.8044,
+      "t_stat": 1.73,
+      "p_value": 0.08315,
+      "CI_Lower": -0.4108,
+      "CI_Upper": 6.667
+    },
+    {
+      "Feature": "mean_bmi",
+      "Coefficient": -2.1507,
+      "Std_Error": 1.3369,
+      "t_stat": -1.61,
+      "p_value": 0.10785,
+      "CI_Lower": -4.7726,
+      "CI_Upper": 0.4713
+    },
+    {
+      "Feature": "is_host",
+      "Coefficient": 1.1724,
+      "Std_Error": 0.1459,
+      "t_stat": 8.04,
+      "p_value": 0.0,
+      "CI_Lower": 0.8862,
+      "CI_Upper": 1.4585
+    },
+    {
+      "Feature": "prev_medals",
+      "Coefficient": 9.6092,
+      "Std_Error": 0.2207,
+      "t_stat": 43.55,
+      "p_value": 0.0,
+      "CI_Lower": 9.1764,
+      "CI_Upper": 10.042
+    }
+  ],
+  "total_samples": 2264,
+  "train_samples": 1811,
+  "test_samples": 453,
+  "feature_names": [
+    "total_athletes",
+    "total_entries",
+    "num_sports",
+    "num_events",
+    "female_ratio",
+    "mean_age",
+    "mean_height",
+    "mean_weight",
+    "mean_bmi",
+    "is_host",
+    "prev_medals"
+  ]
+}

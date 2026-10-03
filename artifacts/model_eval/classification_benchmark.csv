@@ -1,7 +1,0 @@
-Model,10-Fold CV Accuracy (%),Test Accuracy (%),Test ROC-AUC,Test F1,Test Precision,Test Recall
-K-Nearest Neighbors Classifier,80.25,80.83,0.8392,0.8736,0.8413,0.9086
-Bagging Classifier,80.15,78.33,0.8188,0.868,0.7808,0.9771
-Gradient Boosting Classifier,83.49,79.17,0.8353,0.867,0.8109,0.9314
-Base Decision Tree,80.68,79.17,0.8055,0.8634,0.8272,0.9029
-Logistic Regression,80.04,79.17,0.8193,0.8619,0.8342,0.8914
-AdaBoost Classifier,75.76,75.83,0.7685,0.8564,0.7555,0.9886

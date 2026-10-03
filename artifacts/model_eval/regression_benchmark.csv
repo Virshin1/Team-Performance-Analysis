@@ -1,6 +1,0 @@
-Model,10-Fold CV R2,Test R2,Test RMSE,Test MAE
-K-Nearest Neighbors Regressor,0.365,0.4533,0.1303,0.0823
-Gradient Boosting Regressor,0.4726,0.408,0.1356,0.0915
-Multiple Linear Regression,0.3919,0.3603,0.141,0.1039
-AdaBoost Regressor,0.3855,0.3318,0.1441,0.1056
-Decision Tree Regressor,0.3193,0.2378,0.1539,0.1039

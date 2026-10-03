@@ -17,8 +17,9 @@ __pycache__/
 .AppleDouble
 .LSOverride
 
-# Archives
+# Archives & Temporary Artifacts
 garment_data.zip
+MachineLearing_exam.zip
 
 # Logs
 *.log
